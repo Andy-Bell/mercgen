@@ -15,7 +15,7 @@ class Mercgen::Exporter
       #modname "Mercgen-#{name}"
       #description "A Selection of random mercenary companies, generated with version #{Mercgen::VERSION}. This pack contains #{data.length} companies."
       #clearmercs
-      #{companies}}
+      #{companies}
     OUTPUT
   end
 
