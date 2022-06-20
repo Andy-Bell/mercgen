@@ -1,39 +1,21 @@
 # Mercgen
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/mercgen`. To experiment with that code, run `bin/console` for an interactive prompt.
+Mercgen is a small series of ruby scripts to generate several random mercenary
+companies for the game Dominions 5 by Illwinter and output them as a mod file.
 
-TODO: Delete this and the text above, and describe your gem
+To use:
 
-## Installation
+Requires Ruby 3.0.1 and bundler installed. Run bundle install to install all the
+needed gems.
 
-Add this line to your application's Gemfile:
+Set environment variables for the mercenary mod name, the number of companies
+(optional) and the name of the file where you want it to be output (including
+the .dm filetype) (also optional)
 
-```ruby
-gem 'mercgen'
 ```
+MOD_NAME=my_merc_list bin/mercgen_runner
 
-And then execute:
+or
 
-    $ bundle install
-
-Or install it yourself as:
-
-    $ gem install mercgen
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/mercgen. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/mercgen/blob/master/CODE_OF_CONDUCT.md).
-
-## Code of Conduct
-
-Everyone interacting in the Mercgen project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/mercgen/blob/master/CODE_OF_CONDUCT.md).
+MOD_NAME=my_merc_list TOTAL_COMPANIES=200 OUTPUT_PATH='./custom/path/here.dm' bin/mercgen_runner
+```
