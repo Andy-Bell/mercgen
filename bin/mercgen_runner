@@ -11,5 +11,13 @@ require "mercgen"
 # require "pry"
 # Pry.start
 
-require "irb"
-IRB.start(__FILE__)
+# require "byebug"
+# byebug
+
+name = ENV['MOD_NAME']
+raise "no mod name" if name.nil?
+number_of_companies = ENV.fetch('TOTAL_COMPANIES', 20)
+output_path = ENV.fetch('OUTPUT_PATH', "./companies/#{name}.dm")
+
+
+Mercgen::Generator.new(name, output_path, number_of_companies).run
