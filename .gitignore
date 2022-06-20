@@ -9,7 +9,7 @@
 /vendor/
 /companies/*
 !/companies/readme.md
-
+.byebug_history
 
 # rspec failure tracking
 .rspec_status
